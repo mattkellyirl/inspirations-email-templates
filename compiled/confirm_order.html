@@ -89,34 +89,32 @@
     <div style="margin: 0px auto; max-width: 600px">
       <table
         align="center"
-        border="1"
+        border="0"
         cellpadding="0"
         cellspacing="0"
         role="presentation"
         style="width: 100%"
       >
         <tr>
-          <td align="center" style="padding: 20px 0">
+          <td align="center" style="padding: 25px 0">
             <img
-              src="/graphics/Inspirations-Logo.png"
+              src="/graphics/Inspirations-Logo-Gold.png"
               alt="Logo"
-              style="display: block; max-width: 150px; height: auto"
-              width="150"
+              style="display: block; max-width: 250px; height: auto"
+              width="250"
             />
           </td>
         </tr>
       </table>
     </div>
 
-    <div style>
+    <div style=>
       <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
 
-      <div
-        style="margin: 0px auto; max-width: 600px; background-color: #ffe5e5"
-      >
+      <div style="margin: 0px auto; max-width: 600px">
         <table
           align="center"
-          border="1"
+          border="0"
           cellpadding="0"
           cellspacing="0"
           role="presentation"
@@ -166,14 +164,15 @@
                         >
                           <div
                             style="
-                              font-family: Ubuntu, Helvetica, Arial, sans-serif;
-                              font-size: 16px;
+                              font-family: 'Helvetica Neue', Helvetica, Roboto,
+                                Arial, sans-serif;
+                              font-size: 13px;
                               line-height: 1;
                               text-align: left;
-                              color: #000000;
+                              color: #737373;
                             "
                           >
-                            Dear User,
+                            Hi Val,
                           </div>
                         </td>
                       </tr>
@@ -189,412 +188,28 @@
                         >
                           <div
                             style="
-                              font-family: Ubuntu, Helvetica, Arial, sans-serif;
+                              font-family: 'Helvetica Neue', Helvetica, Roboto,
+                                Arial, sans-serif;
                               font-size: 13px;
                               line-height: 1;
                               text-align: left;
-                              color: #000000;
+                              color: #737373;
                             "
                           >
-                            {{#if order.order_details_url}} Thank you for your
-                            order! We are currently preparing your items and we
-                            will notify you once they have been shipped. Please
-                            view a summary of your order below:
-                            <a href="{{order.order_details_url}}"
+                            <!-- {{#if order.order_details_url}}  -->
+                            Thank you for your order! We are currently preparing
+                            your items and we will notify you once they have
+                            been shipped. Please view a summary of your order
+                            below:
+                            <!-- <a href="{{order.order_details_url}}"
                               >{{order.order_details_url}}</a
-                            >
+                            > -->
                             <!-- {{else}} Thank you for your order. Below is the list
                             of ordered products. {{/if}} -->
                           </div>
                         </td>
                       </tr>
-                    </tbody>
-                  </table>
-                </div>
 
-                <!--[if mso | IE]></td></tr></table><![endif]-->
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-
-      <div
-        style="margin: 0px auto; max-width: 600px; background-color: #e5fcff"
-      >
-        <table
-          align="center"
-          border="1"
-          cellpadding="0"
-          cellspacing="0"
-          role="presentation"
-          style="width: 100%"
-        >
-          <tbody>
-            <tr>
-              <td
-                style="
-                  direction: ltr;
-                  font-size: 0px;
-                  padding: 20px 0;
-                  text-align: center;
-                "
-                align="center"
-              >
-                <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
-
-                <div
-                  class="mj-column-per-100 mj-outlook-group-fix"
-                  style="
-                    font-size: 0px;
-                    text-align: left;
-                    direction: ltr;
-                    display: inline-block;
-                    vertical-align: top;
-                    width: 100%;
-                  "
-                >
-                  <table
-                    border="0"
-                    cellpadding="0"
-                    cellspacing="0"
-                    role="presentation"
-                    style="vertical-align: top"
-                    width="100%"
-                  >
-                    <tbody>
-                      <tr>
-                        <td
-                          align="left"
-                          style="
-                            font-size: 0px;
-                            padding: 10px 25px;
-                            word-break: break-word;
-                          "
-                        >
-                          <table
-                            cellpadding="0"
-                            cellspacing="0"
-                            width="100%"
-                            border="0"
-                            style="
-                              color: #000000;
-                              font-family: Ubuntu, Helvetica, Arial, sans-serif;
-                              font-size: 13px;
-                              line-height: 22px;
-                              table-layout: auto;
-                              width: 100%;
-                              border: none;
-                            "
-                          >
-                            <tfoot>
-                              <tr>
-                                <td
-                                  colspan="3"
-                                  style="padding: 5px; text-align: right"
-                                  align="right"
-                                >
-                                  Subtotal
-                                </td>
-                                <td
-                                  style="padding: 5px; text-align: right"
-                                  align="right"
-                                >
-                                  {{price order.subtotal_net_amount
-                                  order.subtotal_gross_amount order.currency
-                                  display_gross=order.display_gross_prices}}
-                                </td>
-                              </tr>
-                              <tr>
-                                <td
-                                  colspan="3"
-                                  style="padding: 5px; text-align: right"
-                                  align="right"
-                                >
-                                  Shipping
-                                </td>
-                                <td
-                                  style="padding: 5px; text-align: right"
-                                  align="right"
-                                >
-                                  {{price order.shipping_price_net_amount
-                                  order.shipping_price_gross_amount
-                                  order.currency
-                                  display_gross=order.display_gross_prices}}
-                                </td>
-                              </tr>
-                              <tr>
-                                <td
-                                  colspan="3"
-                                  style="padding: 5px; text-align: right"
-                                  align="right"
-                                >
-                                  {{#if order.display_gross_prices}} Taxes
-                                  (included) {{else}} Taxes {{/if}}
-                                </td>
-                                <td
-                                  style="padding: 5px; text-align: right"
-                                  align="right"
-                                >
-                                  {{price order.tax_amount order.tax_amount
-                                  order.currency
-                                  display_gross=order.display_gross_prices}}
-                                </td>
-                              </tr>
-                              {{#if order.voucher_discount}}
-                              <tr>
-                                <td
-                                  colspan="3"
-                                  style="padding: 5px; text-align: right"
-                                  align="right"
-                                >
-                                  Discount
-                                </td>
-                                <td
-                                  style="padding: 5px; text-align: right"
-                                  align="right"
-                                >
-                                  {{price order.voucher_discount.amount_value
-                                  order.voucher_discount.amount_value
-                                  order.currency
-                                  display_gross=order.display_gross_prices}}
-                                </td>
-                              </tr>
-                              {{/if}}
-                              <tr>
-                                <td
-                                  colspan="3"
-                                  style="padding: 5px; text-align: right"
-                                  align="right"
-                                >
-                                  <strong> Total </strong>
-                                </td>
-                                <td
-                                  style="padding: 5px; text-align: right"
-                                  align="right"
-                                >
-                                  <strong>
-                                    {{price order.total_net_amount
-                                    order.total_gross_amount order.currency
-                                    display_gross=order.display_gross_prices}}
-                                  </strong>
-                                </td>
-                              </tr>
-                            </tfoot>
-                            <thead
-                              class="table-header-row"
-                              style="border-bottom: 2px solid #000"
-                            >
-                              <tr>
-                                <th style="padding: 5px">Item</th>
-                                <th style="padding: 5px">Quantity</th>
-                                <th style="padding: 5px">Per unit</th>
-                                <th style="padding: 5px">Subtotal</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              {{#each order.lines}}
-                              <tr
-                                class="table-item-row"
-                                style="border-bottom: 1px solid #d3d1d0"
-                              >
-                                {{#if variant_name}}
-                                <td style="padding: 5px">
-                                  {{product_name}} ({{variant_name}})
-                                </td>
-                                {{else}}
-                                <td style="padding: 5px">{{product_name}}</td>
-                                {{/if}}
-                                <td
-                                  style="padding: 5px; text-align: right"
-                                  align="right"
-                                >
-                                  {{quantity}}
-                                </td>
-                                <td
-                                  style="padding: 5px; text-align: right"
-                                  align="right"
-                                >
-                                  {{price unit_price_net_amount
-                                  unit_price_gross_amount ../order.currency
-                                  display_gross=../order.display_gross_prices}}
-                                </td>
-                                <td
-                                  style="padding: 5px; text-align: right"
-                                  align="right"
-                                >
-                                  {{price total_net_amount total_gross_amount
-                                  ../order.currency
-                                  display_gross=../order.display_gross_prices}}
-                                </td>
-                              </tr>
-                              {{/each}}
-                            </tbody>
-                          </table>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-
-                <!--[if mso | IE]></td></tr></table><![endif]-->
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-
-      <div style="margin: 0px auto; max-width: 600px">
-        <table
-          align="center"
-          border="0"
-          cellpadding="0"
-          cellspacing="0"
-          role="presentation"
-          style="width: 100%"
-        >
-          <tbody>
-            <tr>
-              <td
-                style="
-                  direction: ltr;
-                  font-size: 0px;
-                  padding: 20px 0;
-                  text-align: center;
-                "
-                align="center"
-              >
-                <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
-
-                <div
-                  class="mj-column-per-100 mj-outlook-group-fix"
-                  style="
-                    font-size: 0px;
-                    text-align: left;
-                    direction: ltr;
-                    display: inline-block;
-                    vertical-align: top;
-                    width: 100%;
-                  "
-                >
-                  <table
-                    border="0"
-                    cellpadding="0"
-                    cellspacing="0"
-                    role="presentation"
-                    style="vertical-align: top"
-                    width="100%"
-                  >
-                    <tbody>
-                      <tr>
-                        <td
-                          align="left"
-                          style="
-                            font-size: 0px;
-                            padding: 10px 25px;
-                            word-break: break-word;
-                          "
-                        >
-                          <table
-                            cellpadding="0"
-                            cellspacing="0"
-                            width="100%"
-                            border="0"
-                            style="
-                              color: #000000;
-                              font-family: Ubuntu, Helvetica, Arial, sans-serif;
-                              font-size: 13px;
-                              line-height: 22px;
-                              table-layout: auto;
-                              width: 100%;
-                              border: none;
-                            "
-                          >
-                            <thead
-                              class="table-header-row"
-                              style="border-bottom: 2px solid #000"
-                            >
-                              <tr>
-                                <th style="padding: 5px">Billing address</th>
-                                <th style="padding: 5px">Shipping address</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td class="address" style="padding: 5px">
-                                  {{#if order.billing_address}} {{format_address
-                                  order.billing_address}} {{else}} No billing
-                                  address {{/if}}
-                                </td>
-                                <td css-class="address" style="padding: 5px">
-                                  {{#if order.shipping_address}}
-                                  {{format_address order.shipping_address}}
-                                  {{else}} No shipping required {{/if}}
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-
-                <!--[if mso | IE]></td></tr></table><![endif]-->
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-
-      <div style="margin: 0px auto; max-width: 600px">
-        <table
-          align="center"
-          border="0"
-          cellpadding="0"
-          cellspacing="0"
-          role="presentation"
-          style="width: 100%"
-        >
-          <tbody>
-            <tr>
-              <td
-                style="
-                  direction: ltr;
-                  font-size: 0px;
-                  padding: 20px 0;
-                  text-align: center;
-                "
-                align="center"
-              >
-                <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
-
-                <div
-                  class="mj-column-per-100 mj-outlook-group-fix"
-                  style="
-                    font-size: 0px;
-                    text-align: left;
-                    direction: ltr;
-                    display: inline-block;
-                    vertical-align: top;
-                    width: 100%;
-                  "
-                >
-                  <table
-                    border="0"
-                    cellpadding="0"
-                    cellspacing="0"
-                    role="presentation"
-                    style="vertical-align: top"
-                    width="100%"
-                  >
-                    <tbody>
                       <tr>
                         <td
                           align="left"
@@ -606,15 +221,15 @@
                         >
                           <div
                             style="
-                              font-family: Ubuntu, Helvetica, Arial, sans-serif;
-                              font-size: 13px;
-                              line-height: 1;
+                              color: #b8a77a;
+                              font-family: 'Helvetica Neue', Helvetica, Roboto,
+                                Arial, sans-serif;
+                              font-size: 18px;
+                              font-weight: bold;
                               text-align: left;
-                              color: #000000;
                             "
                           >
-                            This is an automatically generated e-mail, please do
-                            not reply.
+                            Order #101010
                           </div>
                         </td>
                       </tr>
@@ -630,24 +245,407 @@
       </div>
 
       <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-
-      <div
-        style="
-          background: #f2f2f2;
-          background-color: #f2f2f2;
-          margin: 0px auto;
-          max-width: 600px;
-        "
+      <!-- Grid -->
+      <table
+        width="100%"
+        cellspacing="0"
+        cellpadding="0"
+        border="0"
+        style="max-width: 600px; margin: 0 auto"
       >
+        <tr>
+          <td style="padding: 0px 25px">
+            <table
+              cellspacing="0"
+              cellpadding="6"
+              border="1"
+              style="
+                color: #737373;
+                border: 1px solid #e4e4e4;
+                vertical-align: middle;
+                width: 100%;
+                font-family: 'Helvetica Neue', Helvetica, Roboto, Arial,
+                  sans-serif;
+              "
+              width="100%"
+            >
+              <thead>
+                <tr>
+                  <th
+                    scope="col"
+                    style="
+                      color: #737373;
+                      border: 1px solid #e4e4e4;
+                      vertical-align: middle;
+                      padding: 12px;
+                      text-align: left;
+                    "
+                    align="left"
+                  >
+                    Product
+                  </th>
+                  <th
+                    scope="col"
+                    style="
+                      color: #737373;
+                      border: 1px solid #e4e4e4;
+                      vertical-align: middle;
+                      padding: 12px;
+                      text-align: left;
+                    "
+                    align="left"
+                  >
+                    Quantity
+                  </th>
+                  <th
+                    scope="col"
+                    style="
+                      color: #737373;
+                      border: 1px solid #e4e4e4;
+                      vertical-align: middle;
+                      padding: 12px;
+                      text-align: left;
+                    "
+                    align="left"
+                  >
+                    Price
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td
+                    style="
+                      color: #737373;
+                      border: 1px solid #e4e4e4;
+                      padding: 12px;
+                      text-align: left;
+                      vertical-align: middle;
+                      font-family: 'Helvetica Neue', Helvetica, Roboto, Arial,
+                        sans-serif;
+                      word-wrap: break-word;
+                    "
+                    align="left"
+                  >
+                    Inspirations Product
+                  </td>
+                  <td
+                    style="
+                      color: #737373;
+                      border: 1px solid #e4e4e4;
+                      padding: 12px;
+                      text-align: left;
+                      vertical-align: middle;
+                      font-family: 'Helvetica Neue', Helvetica, Roboto, Arial,
+                        sans-serif;
+                    "
+                    align="left"
+                  >
+                    2
+                  </td>
+                  <td
+                    style="
+                      color: #737373;
+                      border: 1px solid #e4e4e4;
+                      padding: 12px;
+                      text-align: left;
+                      vertical-align: middle;
+                      font-family: 'Helvetica Neue', Helvetica, Roboto, Arial,
+                        sans-serif;
+                    "
+                    align="left"
+                  >
+                    <span><span>$</span>29.95</span>
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th
+                    scope="row"
+                    colspan="2"
+                    style="
+                      color: #737373;
+                      border: 1px solid #e4e4e4;
+                      vertical-align: middle;
+                      padding: 12px;
+                      text-align: left;
+                    "
+                    align="left"
+                  >
+                    Subtotal:
+                  </th>
+                  <td
+                    style="
+                      color: #737373;
+                      border: 1px solid #e4e4e4;
+                      vertical-align: middle;
+                      padding: 12px;
+                      text-align: left;
+                    "
+                    align="left"
+                  >
+                    <span><span>$</span>59.90</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th
+                    scope="row"
+                    colspan="2"
+                    style="
+                      color: #737373;
+                      border: 1px solid #e4e4e4;
+                      vertical-align: middle;
+                      padding: 12px;
+                      text-align: left;
+                    "
+                    align="left"
+                  >
+                    Shipping:
+                  </th>
+                  <td
+                    style="
+                      color: #737373;
+                      border: 1px solid #e4e4e4;
+                      vertical-align: middle;
+                      padding: 12px;
+                      text-align: left;
+                    "
+                    align="left"
+                  >
+                    <span><span>$</span>18.95</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th
+                    scope="row"
+                    colspan="2"
+                    style="
+                      color: #737373;
+                      border: 1px solid #e4e4e4;
+                      vertical-align: middle;
+                      padding: 12px;
+                      text-align: left;
+                    "
+                    align="left"
+                  >
+                    Payment method:
+                  </th>
+                  <td
+                    style="
+                      color: #737373;
+                      border: 1px solid #e4e4e4;
+                      vertical-align: middle;
+                      padding: 12px;
+                      text-align: left;
+                    "
+                    align="left"
+                  >
+                    Credit Card
+                  </td>
+                </tr>
+                <tr>
+                  <th
+                    scope="row"
+                    colspan="2"
+                    style="
+                      color: #737373;
+                      border: 1px solid #e4e4e4;
+                      vertical-align: middle;
+                      padding: 12px;
+                      text-align: left;
+                    "
+                    align="left"
+                  >
+                    Total:
+                  </th>
+                  <td
+                    style="
+                      color: #737373;
+                      border: 1px solid #e4e4e4;
+                      vertical-align: middle;
+                      padding: 12px;
+                      text-align: left;
+                    "
+                    align="left"
+                  >
+                    <span><span>$</span>78.85</span>
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </td>
+        </tr>
+      </table>
+
+      <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+
+      <div style="margin: 0px auto; max-width: 600px">
         <table
           align="center"
           border="0"
           cellpadding="0"
           cellspacing="0"
           role="presentation"
-          style="background: #f2f2f2; background-color: #f2f2f2; width: 100%"
+          style="width: 100%"
         >
           <tbody>
+            <tr>
+              <td
+                style="
+                  direction: ltr;
+                  font-size: 0px;
+                  padding: 25px 0;
+                  text-align: center;
+                "
+                align="center"
+              >
+                <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+
+                <div
+                  class="mj-column-per-100 mj-outlook-group-fix"
+                  style="
+                    font-size: 0px;
+                    text-align: left;
+                    direction: ltr;
+                    display: inline-block;
+                    vertical-align: top;
+                    width: 100%;
+                  "
+                >
+                  <table
+                    border="0"
+                    cellpadding="0"
+                    cellspacing="0"
+                    role="presentation"
+                    style="vertical-align: top"
+                    width="100%"
+                  >
+                    <tbody>
+                      <tr>
+                        <td
+                          align="left"
+                          style="
+                            font-size: 0px;
+                            padding: 10px 25px;
+                            word-break: break-word;
+                          "
+                        >
+                          <table
+                            cellpadding="0"
+                            cellspacing="0"
+                            width="100%"
+                            border="0"
+                            style="
+                              color: #000000;
+                              font-family: Ubuntu, Helvetica, Arial, sans-serif;
+                              font-size: 13px;
+                              line-height: 22px;
+                              table-layout: auto;
+                              width: 100%;
+                              border: none;
+                            "
+                          >
+                            <!-- Billing and Shipping Information -->
+                            <thead class="table-header-row">
+                              <tr>
+                                <!-- Billing Information -->
+                                <th
+                                  style="
+                                    padding: 5px;
+                                    color: #b8a77a;
+                                    font-family: 'Helvetica Neue', Helvetica,
+                                      Roboto, Arial, sans-serif;
+                                    font-size: 18px;
+                                    font-weight: bold;
+                                    text-align: left;
+                                  "
+                                >
+                                  Billing Address
+                                </th>
+                                <!-- Shipping Information -->
+                                <th
+                                  style="
+                                    padding: 5px;
+                                    color: #b8a77a;
+                                    font-family: 'Helvetica Neue', Helvetica,
+                                      Roboto, Arial, sans-serif;
+                                    font-size: 18px;
+                                    font-weight: bold;
+                                    text-align: left;
+                                  "
+                                >
+                                  Shipping Address
+                                </th>
+                              </tr>
+                            </thead>
+
+                            <tbody>
+                              <tr>
+                                <td
+                                  class="address"
+                                  style="padding: 5px; color: #737373"
+                                >
+                                  Val L Locsey<br />
+                                  PO BOX 111,<br />
+                                  Suburb SA 5000<br />
+                                  0411 022 033
+
+                                  <!-- {{#if order.billing_address}}
+                                  {{format_address order.billing_address}}
+                                  {{else}} No billing address {{/if}} -->
+                                </td>
+                                <td
+                                  class="address"
+                                  style="padding: 5px; color: #737373"
+                                >
+                                  Val L Locsey<br />
+                                  PO BOX 111,<br />
+                                  Suburb SA 5000<br />
+                                  0411 022 033
+
+                                  <!-- {{#if order.shipping_address}}
+                                  {{format_address order.shipping_address}}
+                                  {{else}} No shipping required {{/if}} -->
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <!--[if mso | IE]></td></tr></table><![endif]-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+
+      <div style="margin: 0px auto; max-width: 600px">
+        <table
+          align="center"
+          border="0"
+          cellpadding="0"
+          cellspacing="0"
+          role="presentation"
+          style="width: 100%"
+        >
+          <tbody>
+            <tr>
+              <td align="center" style="padding: 0px 0">
+                <img
+                  src="/graphics/unnamed.png"
+                  alt="diamond"
+                  style="display: block; max-width: 25; height: auto"
+                  width="25"
+                />
+              </td>
+            </tr>
             <tr>
               <td
                 style="
@@ -691,14 +689,18 @@
                         >
                           <div
                             style="
-                              font-family: Ubuntu, Helvetica, Arial, sans-serif;
+                              font-family: 'Helvetica Neue', Helvetica, Roboto,
+                                Arial, sans-serif;
                               font-size: 13px;
                               line-height: 1;
                               text-align: center;
-                              color: #000000;
+                              color: #737373;
                             "
                           >
-                            Sincerely, {{ site_name }}
+                            Thanks for using
+                            <a href="https://www.inspirationsstudios.com">
+                              www.inspirationsstudios.com</a
+                            >!
                           </div>
                         </td>
                       </tr>
@@ -712,8 +714,6 @@
           </tbody>
         </table>
       </div>
-
-      <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="no-display-outlook" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
 
       <div
         class="no-display"
@@ -771,7 +771,6 @@
                         >
                           <div
                             style="
-                              font-family: Ubuntu, Helvetica, Arial, sans-serif;
                               font-size: 13px;
                               line-height: 1;
                               text-align: left;
