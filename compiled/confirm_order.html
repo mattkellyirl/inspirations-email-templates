@@ -170,8 +170,8 @@
                               color: #737373;
                             "
                           >
-                            <!-- {{#if order.order_details_url}}  -->
-                            Hi Val,
+                            <!-- {{#if order.order_details_url}} Hi -->
+                            {{order.user.first_name}},
                             <div style="margin-top: 13px">
                               Thank you for your order! We are currently
                               preparing your items and we will notify you once
@@ -208,7 +208,7 @@
                               margin-top: 30px;
                             "
                           >
-                            Order #101010
+                            Order #{{order.number}}
                           </div>
                         </td>
                       </tr>
@@ -248,7 +248,9 @@
               width="100%"
             >
               <thead>
+                <!-- Title/Header Row -->
                 <tr>
+                  <!-- Product -->
                   <th
                     scope="col"
                     style="
@@ -262,6 +264,8 @@
                   >
                     Product
                   </th>
+
+                  <!-- Quantity -->
                   <th
                     scope="col"
                     style="
@@ -275,6 +279,8 @@
                   >
                     Quantity
                   </th>
+
+                  <!-- Price -->
                   <th
                     scope="col"
                     style="
@@ -291,7 +297,28 @@
                 </tr>
               </thead>
               <tbody>
+                <!-- {{#each order.lines}} -->
                 <tr>
+                  <!-- {{#if variant_name}} -->
+                  <!-- <td
+                    style="
+                      color: #737373;
+                      border: 1px solid #e4e4e4;
+                      padding: 12px;
+                      text-align: left;
+                      vertical-align: middle;
+                      font-family: 'Helvetica Neue', Helvetica, Roboto, Arial,
+                        sans-serif;
+                      word-wrap: break-word;
+                    "
+                    align="left"
+                  >
+                    {{product_name}} ({{variant_name}})
+                  </td> -->
+
+                  <!-- {{else}} -->
+
+                  <!-- Product Name -->
                   <td
                     style="
                       color: #737373;
@@ -305,8 +332,10 @@
                     "
                     align="left"
                   >
-                    Inspirations Product
+                    {{product_name}}
                   </td>
+
+                  <!-- Quantity -->
                   <td
                     style="
                       color: #737373;
@@ -319,8 +348,10 @@
                     "
                     align="left"
                   >
-                    2
+                    {{quantity}}
                   </td>
+
+                  <!-- Line Total -->
                   <td
                     style="
                       color: #737373;
@@ -333,12 +364,16 @@
                     "
                     align="left"
                   >
-                    <span><span>$</span>29.95</span>
+                    {{price total_net_amount total_gross_amount
+                    ../order.currency
+                    display_gross=../order.display_gross_prices}}
                   </td>
                 </tr>
               </tbody>
+
               <tfoot>
                 <tr>
+                  <!-- Subtotal -->
                   <th
                     scope="row"
                     colspan="2"
@@ -363,9 +398,13 @@
                     "
                     align="left"
                   >
-                    <span><span>$</span>59.90</span>
+                    {{price order.subtotal_net_amount
+                    order.subtotal_gross_amount order.currency
+                    display_gross=order.display_gross_prices}}
                   </td>
                 </tr>
+
+                <!-- Shipping -->
                 <tr>
                   <th
                     scope="row"
@@ -391,9 +430,13 @@
                     "
                     align="left"
                   >
-                    <span><span>$</span>18.95</span>
+                    {{price order.shipping_price_net_amount
+                    order.shipping_price_gross_amount order.currency
+                    display_gross=order.display_gross_prices}}
                   </td>
                 </tr>
+
+                <!-- Payment Method -->
                 <tr>
                   <th
                     scope="row"
@@ -419,9 +462,11 @@
                     "
                     align="left"
                   >
-                    Credit Card
+                    {{order.payment_method}}
                   </td>
                 </tr>
+
+                <!-- Order Total -->
                 <tr>
                   <th
                     scope="row"
@@ -447,7 +492,8 @@
                     "
                     align="left"
                   >
-                    <span><span>$</span>78.85</span>
+                    {{price order.total_net_amount order.total_gross_amount
+                    order.currency display_gross=order.display_gross_prices}}
                   </td>
                 </tr>
               </tfoot>
@@ -555,27 +601,45 @@
                             <tbody>
                               <tr>
                                 <!-- Address Information -->
-                                <td style="color: #737373">
-                                  Val L Locsey<br />
+                                <td
+                                  style="
+                                    font-family: 'Helvetica Neue', Helvetica,
+                                      Roboto, Arial, sans-serif;
+                                    font-size: 13px;
+                                    line-height: 20px;
+                                    text-align: left;
+                                    color: #737373;
+                                  "
+                                >
+                                  {{#if order.billing_address}} {{format_address
+                                  order.billing_address}} {{else}} No billing
+                                  address {{/if}}
+
+                                  <!-- Val L Locsey<br />
                                   PO BOX 111,<br />
                                   Suburb SA 5000<br />
-                                  0411 022 033
-
-                                  <!-- {{#if order.billing_address}}
-                                  {{format_address order.billing_address}}
-                                  {{else}} No billing address {{/if}} -->
+                                  0411 022 033 -->
                                 </td>
 
                                 <!-- Shipping Information -->
-                                <td style="color: #737373">
-                                  Val L Locsey<br />
+                                <td
+                                  style="
+                                    font-family: 'Helvetica Neue', Helvetica,
+                                      Roboto, Arial, sans-serif;
+                                    font-size: 13px;
+                                    line-height: 20px;
+                                    text-align: left;
+                                    color: #737373;
+                                  "
+                                >
+                                  {{#if order.shipping_address}}
+                                  {{format_address order.shipping_address}}
+                                  {{else}} No shipping required {{/if}}
+
+                                  <!-- Val L Locsey<br />
                                   PO BOX 111,<br />
                                   Suburb SA 5000<br />
-                                  0411 022 033
-
-                                  <!-- {{#if order.shipping_address}}
-                                  {{format_address order.shipping_address}}
-                                  {{else}} No shipping required {{/if}} -->
+                                  0411 022 033 -->
                                 </td>
                               </tr>
                             </tbody>
@@ -595,7 +659,7 @@
       <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
 
       <!-- Footer -->
-      <div style="margin: 30px auto 0; max-width: 600px">
+      <div style="margin: 30px auto; max-width: 600px">
         <!-- Diamond Container -->
         <table
           align="center"
