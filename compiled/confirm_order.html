@@ -97,7 +97,7 @@
         <tr>
           <td align="center">
             <img
-              src="/graphics/Inspirations-Logo-Gold.png"
+              src="https://storage.googleapis.com/inspirations-media/email-assets/Inspirations-Logo-Gold.png"
               alt="Logo"
               style="display: block; max-width: 250px; height: auto"
               width="250"
@@ -170,7 +170,7 @@
                               color: #737373;
                             "
                           >
-                            <!-- {{#if order.order_details_url}} Hi -->
+                            {{#if order.order_details_url}} Hi
                             {{order.user.first_name}},
                             <div style="margin-top: 13px">
                               Thank you for your order! We are currently
@@ -179,11 +179,11 @@
                               your order below:
                             </div>
 
-                            <!-- <a href="{{order.order_details_url}}"
+                            <a href="{{order.order_details_url}}"
                               >{{order.order_details_url}}</a
-                            > -->
-                            <!-- {{else}} Thank you for your order. Below is the list
-                            of ordered products. {{/if}} -->
+                            >
+                            {{else}} Thank you for your order. Below is the list
+                            of ordered products. {{/if}}
                           </div>
                         </td>
                       </tr>
@@ -297,10 +297,10 @@
                 </tr>
               </thead>
               <tbody>
-                <!-- {{#each order.lines}} -->
+                {{#each order.lines}}
                 <tr>
-                  <!-- {{#if variant_name}} -->
-                  <!-- <td
+                  {{#if variant_name}}
+                  <td
                     style="
                       color: #737373;
                       border: 1px solid #e4e4e4;
@@ -314,9 +314,9 @@
                     align="left"
                   >
                     {{product_name}} ({{variant_name}})
-                  </td> -->
+                  </td>
 
-                  <!-- {{else}} -->
+                  {{else}}
 
                   <!-- Product Name -->
                   <td
@@ -334,6 +334,7 @@
                   >
                     {{product_name}}
                   </td>
+                  {{/if}}
 
                   <!-- Quantity -->
                   <td
@@ -369,6 +370,7 @@
                     display_gross=../order.display_gross_prices}}
                   </td>
                 </tr>
+                {{/each}}
               </tbody>
 
               <tfoot>
@@ -673,7 +675,7 @@
               <!-- Diamond -->
               <td align="center" style="padding-bottom: 30px">
                 <img
-                  src="/graphics/unnamed.png"
+                  src="https://storage.googleapis.com/inspirations-media/email-assets/unnamed.png"
                   alt="diamond"
                   style="display: block; max-width: 25px; height: auto"
                   width="25"
@@ -706,7 +708,7 @@
                 "
               >
                 <img
-                  src="/graphics/Inspirations-Logo-Tagline.jpg"
+                  src="https://storage.googleapis.com/inspirations-media/email-assets/Inspirations-Logo-Tagline.jpg"
                   alt="Logo"
                   style="display: block; max-width: 180px; height: auto"
                   width="180"
