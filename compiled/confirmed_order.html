@@ -171,7 +171,7 @@
                             "
                           >
                             Hi
-                            {{order.user.first_name}},
+                            {{order.billing_address.first_name}},
                             <div style="margin-top: 13px">
                               Your order has been confirmed by staff. A summary of your order is below:
                             </div>
@@ -354,12 +354,12 @@
                       color: #737373;
                       border: 1px solid #e4e4e4;
                       padding: 12px;
-                      text-align: left;
+                      text-align: right;
                       vertical-align: middle;
                       font-family: 'Helvetica Neue', Helvetica, Roboto, Arial,
                         sans-serif;
                     "
-                    align="left"
+                    align="right"
                   >
                     {{price total_net_amount total_gross_amount
                     ../order.currency
@@ -392,9 +392,9 @@
                       border: 1px solid #e4e4e4;
                       vertical-align: middle;
                       padding: 12px;
-                      text-align: left;
+                      text-align: right;
                     "
-                    align="left"
+                    align="right"
                   >
                     {{price order.subtotal_net_amount
                     order.subtotal_gross_amount order.currency
@@ -424,9 +424,9 @@
                       border: 1px solid #e4e4e4;
                       vertical-align: middle;
                       padding: 12px;
-                      text-align: left;
+                      text-align: right;
                     "
-                    align="left"
+                    align="right"
                   >
                     {{price order.shipping_price_net_amount
                     order.shipping_price_gross_amount order.currency
@@ -435,7 +435,7 @@
                 </tr>
 
                 <!-- Payment Method -->
-                <tr>
+                <!-- <tr>
                   <th
                     scope="row"
                     colspan="2"
@@ -462,7 +462,7 @@
                   >
                     {{order.payment_method}}
                   </td>
-                </tr>
+                </tr> -->
 
                 <!-- Order Total -->
                 <tr>
@@ -486,9 +486,9 @@
                       border: 1px solid #e4e4e4;
                       vertical-align: middle;
                       padding: 12px;
-                      text-align: left;
+                      text-align: right;
                     "
-                    align="left"
+                    align="right"
                   >
                     {{price order.total_net_amount order.total_gross_amount
                     order.currency display_gross=order.display_gross_prices}}
