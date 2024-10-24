@@ -170,19 +170,17 @@
                               color: #737373;
                             "
                           >
-                            {{#if order.order_details_url}} Hi
+                            Hi
                             {{order.user.first_name}},
                             <div style="margin-top: 13px">
                               Thank you for shopping with us at Inspirations
                               Studios. A summary of your order is below:
                             </div>
-
+                            {{#if order.order_details_url}}
                             <a href="{{order.order_details_url}}"
                               >{{order.order_details_url}}</a
                             >
-                            {{else}} Thank you for shopping with us at
-                            Inspirations Studios. A summary of your order is
-                            below: {{/if}}
+                            {{/if}}
                           </div>
                         </td>
                       </tr>

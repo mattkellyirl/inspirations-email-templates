@@ -84,7 +84,7 @@
       }
     </style>
   </head>
-  <body style="word-spacing: normal">
+  <body style="word-spacing: normal; background-color: white">
     <!-- Logo -->
     <div style="margin: 30px auto; max-width: 600px">
       <table
@@ -170,17 +170,16 @@
                               color: #737373;
                             "
                           >
-                            {{#if order.order_details_url}} Hi
+                            Hi
                             {{order.user.first_name}},
                             <div style="margin-top: 13px">
-                              Your order has been confirmed by staff. Please view a summary of
-                              your order below:
+                              Your order has been confirmed by staff. A summary of your order is below:
                             </div>
-
+                            {{#if order.order_details_url}}
                             <a href="{{order.order_details_url}}"
                               >{{order.order_details_url}}</a
                             >
-                            {{else}} Your order has been confirmed by staff. Below is the list of ordered products. {{/if}}
+                            {{/if}}
                           </div>
                         </td>
                       </tr>
@@ -226,7 +225,7 @@
         width="100%"
         cellspacing="0"
         cellpadding="0"
-        style="max-width: 600px; margin: 30px auto 0"
+        style="max-width: 600px; margin: 45px auto 0"
       >
         <tr>
           <td style="padding: 0px 25px">
@@ -731,10 +730,20 @@
                     color: #737373;
                   "
                 >
-                  PO BOX 10177, <br />
+                  PO BOX 10177 <br />
                   Adelaide BC SA 5000 <br />
-                  <a href="https://www.inspirationsstudios.com"
-                    >www.inspirationsstudios.com</a
+                  <a
+                    href="mailto:orders@inspirationsstudios.com"
+                    style="text-decoration: none; color: #737373"
+                  >
+                    orders@inspirationsstudios.com
+                  </a>
+
+                  <br />
+                  <a
+                    href="https://www.inspirationsstudios.com"
+                    style="text-decoration: none; color: #737373"
+                    >inspirationsstudios.com</a
                   >
                 </div>
               </td>
