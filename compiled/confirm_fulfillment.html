@@ -584,86 +584,6 @@
           <tbody>
             <tr>
               <td
-                style="
-                  direction: ltr;
-                  font-size: 0px;
-                  padding: 0px 0;
-                  text-align: center;
-                "
-                align="center"
-              >
-                <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
-
-                <div
-                  class="mj-column-per-100 mj-outlook-group-fix"
-                  style="
-                    font-size: 0px;
-                    text-align: left;
-                    direction: ltr;
-                    display: inline-block;
-                    vertical-align: top;
-                    width: 100%;
-                  "
-                >
-                  <table
-                    border="0"
-                    cellpadding="0"
-                    cellspacing="0"
-                    role="presentation"
-                    style="vertical-align: top"
-                    width="100%"
-                  >
-                    <tbody>
-                  
-                      <!-- Details Row -->
-                      <tr>
-                        <td
-                          align="left"
-                          style="
-                            font-size: 0px;
-                            padding: 0px 25px;
-                            word-break: break-word;
-                          "
-                        >
-                          <div
-                            style="
-                              font-family: 'Helvetica Neue', Helvetica, Roboto,
-                                Arial, sans-serif;
-                              font-size: 13px;
-                              font-weight: bold;
-                              line-height: 20px;
-                              text-align: left;
-                              color: #737373;
-                            "
-                          >
-                            <div>Payment Method: {{payment.method}}</div>
-
-                            <div>Payment Date: {{payment.date}}</div>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-
-                <!--[if mso | IE]></td></tr></table><![endif]-->
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div style="margin: 30px auto 0; max-width: 600px">
-        <table
-          align="center"
-          cellpadding="0"
-          cellspacing="0"
-          role="presentation"
-          style="width: 100%"
-        >
-          <tbody>
-            <tr>
-              <td
                 style="direction: ltr; font-size: 0px; text-align: center"
                 align="center"
               >
@@ -846,7 +766,23 @@
                     width="100%"
                   >
                     <tbody>
-
+                      {{#if digital_lines}}
+                      <tr>
+                        <th
+                                  style="
+                                    padding: 0px 25px 5px;
+                                    color: #b8a77a;
+                                    font-family: 'Helvetica Neue', Helvetica,
+                                      Roboto, Arial, sans-serif;
+                                    font-size: 18px;
+                                    font-weight: bold;
+                                    text-align: left;
+                                  "
+                                >
+                         Downloads
+                         </th>
+                      </tr>
+                      {{#each digital_lines}}
                       <!-- Digital Purchases Row -->
                       <tr>
                         <td
@@ -867,14 +803,42 @@
                               color: #737373;
                             "
                           >
-
-                          <div style="margin-top: 0px">
-                            Click on the download link <a
-                            href="https://www.inspirationsstudios.com"
-                            > here</a> to access your PDF file. Alternatively, log into your online account and click <span style="font-weight: bold; font-style: italic;">Downloads</span>.</div>
+                            {{order_line.product_name}} ({{order_line.product_sku}})
+                            <div style="margin-top: 0px">
+                              <a
+                              href="https://digital-download-i7rhvjkw6q-uc.a.run.app/?o={{../order.id}}&p={{order_line.product.id}}"
+                              >Download PDF</a>
+                            </div>
                           </div>
                         </td>
                       </tr>
+                      {{/each}}
+                      <tr>
+                        <td
+                          align="left"
+                          style="
+                            font-size: 0px;
+                            padding: 0px 25px;
+                            word-break: break-word;
+                          "
+                        >
+                          <div
+                            style="
+                              font-family: 'Helvetica Neue', Helvetica, Roboto,
+                                Arial, sans-serif;
+                              font-size: 13px;
+                              line-height: 20px;
+                              text-align: left;
+                              color: #737373;
+                            "
+                          >
+                            <div style="margin-top: 13px">
+                              Alternatively, login to <a href="https://www.inspirationsstudios.com/my-account/downloads" style="font-weight: bold; font-style: italic;">My Account - Downloads</a> with your online account.
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      {{/if}}
 
                       <!-- Thank You Row -->
                       <tr>
