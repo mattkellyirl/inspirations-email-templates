@@ -172,8 +172,11 @@
                           >
                             Hi {{order.billing_address.first_name}},
                             <div style="margin-top: 13px">
-                              Just letting you know that your order has been
-                              shipped and is on its way to you.
+                              Just letting you know that your order status has been updated to {{order.status}}.
+                            </div>
+
+                            <div style="margin-top: 13px">
+                              For partially fulfilled orders, items marked with an asterisk (*) are still outstanding.
                             </div>
                           </div>
                         </td>
@@ -382,7 +385,7 @@
                     "
                     align="left"
                   >
-                    {{product_name}} ({{variant_name}})
+                    {{product_name}} ({{variant_name}}){{#unless is_fulfilled}}*{{/unless}}
                   </td>
 
                   {{else}}
@@ -782,6 +785,34 @@
                          Downloads
                          </th>
                       </tr>
+
+                      <tr>
+                        <td
+                          align="left"
+                          style="
+                            font-size: 0px;
+                            padding: 0px 25px;
+                            word-break: break-word;
+                          "
+                        >
+                          <div
+                            style="
+                              font-family: 'Helvetica Neue', Helvetica, Roboto,
+                                Arial, sans-serif;
+                              font-size: 13px;
+                              line-height: 20px;
+                              text-align: left;
+                              color: #737373;
+                            "
+                          >
+                            <div style="margin-top: 0px">
+                              Click on the download link below to access your PDF file. Alternatively, login to your <a href="https://www.inspirationsstudios.com/my-account/"
+                              style="text-decoration: none; color: #b8a77a;">online account</a> and click Downloads to access your digital products.
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+
                       {{#each digital_lines}}
                       <!-- Digital Purchases Row -->
                       <tr>
@@ -801,43 +832,30 @@
                               line-height: 20px;
                               text-align: left;
                               color: #737373;
+                              margin-top: 13px;
                             "
                           >
                             {{order_line.product_name}} ({{order_line.product_sku}})
-                            <div style="margin-top: 0px">
+
+                            <div style="margin-top: 13px; text-align: center">
                               <a
                               href="https://digital-download-i7rhvjkw6q-uc.a.run.app/?o={{../order.id}}&p={{order_line.product.id}}"
-                              >Download PDF</a>
+                                style="
+                                  color: white;
+                                  background-color: #b8a77a;
+                                  padding: 10px 20px;
+                                  text-decoration: none;
+                                  border-radius: 5px;
+                                  display: inline-block;
+                                "
+                                >Download PDF ({{order_line.product_sku}})</a
+                              >
                             </div>
                           </div>
                         </td>
                       </tr>
                       {{/each}}
-                      <tr>
-                        <td
-                          align="left"
-                          style="
-                            font-size: 0px;
-                            padding: 0px 25px;
-                            word-break: break-word;
-                          "
-                        >
-                          <div
-                            style="
-                              font-family: 'Helvetica Neue', Helvetica, Roboto,
-                                Arial, sans-serif;
-                              font-size: 13px;
-                              line-height: 20px;
-                              text-align: left;
-                              color: #737373;
-                            "
-                          >
-                            <div style="margin-top: 13px">
-                              Alternatively, login to <a href="https://www.inspirationsstudios.com/my-account/downloads" style="font-weight: bold; font-style: italic;">My Account - Downloads</a> with your online account.
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
+                      
                       {{/if}}
 
                       <!-- Thank You Row -->
@@ -860,7 +878,7 @@
                               color: #737373;
                             "
                           >
-                            <div style="margin-top: 13px">
+                            <div style="margin-top: 30px">
                               Thank you for shopping at Inspirations Studios,
                               home of the world's most beautiful needlework.
                             </div>
