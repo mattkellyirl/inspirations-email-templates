@@ -170,14 +170,14 @@
                               color: #737373;
                             "
                           >
-                            Hi {{order.billing_address.first_name}},
+                            Hi {{user.first_name}},
                             <div style="margin-top: 13px">
                               The email address for your Inspirations Studios
                               account has successfully been updated to:
                             </div>
 
                             <div style="margin-top: 13px">
-                              {{order.billing_address.email}}
+                              {{user.email}}
                             </div>
 
                             <div style="margin-top: 13px">
@@ -373,11 +373,6 @@
                               color: #000000;
                             "
                           >
-                            {{#if order}}
-                            <script type="application/ld+json">
-                              {{{{raw}}}}{{schema_markup}}{{{{/raw}}}}
-                            </script>
-                            {{/if}}
                           </div>
                         </td>
                       </tr>

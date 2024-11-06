@@ -170,7 +170,7 @@
                               color: #737373;
                             "
                           >
-                            Hi {{order.billing_address.first_name}},
+                            Hi,
                             <div style="margin-top: 13px">
                               Thank you for getting in touch and requesting an
                               invoice for your order.
@@ -378,11 +378,6 @@
                               color: #000000;
                             "
                           >
-                            {{#if order}}
-                            <script type="application/ld+json">
-                              {{{{raw}}}}{{schema_markup}}{{{{/raw}}}}
-                            </script>
-                            {{/if}}
                           </div>
                         </td>
                       </tr>

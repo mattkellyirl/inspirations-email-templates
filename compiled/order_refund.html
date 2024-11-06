@@ -197,13 +197,9 @@
                                 Order #{{order.number}}
                               </div>
 
-                              <div>Payment Amount: AUD ${{price.total}}</div>
+                              <div>Order Total: {{price order.total_gross_amount order.total_gross_amount currency display_gross=false}}</div>
 
-                              <div>Refund Amount: AUD ${{refund.method}}</div>
-
-                              <div>Refund Date: {{refund.date}}</div>
-
-                              <div>Transaction ID: {{transaction.id}}</div>
+                              <div>Refund Amount: {{price amount amount currency display_gross=false}}</div>
                             </div>
 
                             <div style="margin-top: 13px">

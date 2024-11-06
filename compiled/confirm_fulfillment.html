@@ -178,6 +178,17 @@
                             <div style="margin-top: 13px">
                               For partially fulfilled orders, items marked with an asterisk (*) are still outstanding.
                             </div>
+
+                            {{#if fulfillment.tracking_number}}
+                            <div style="margin-top: 13px">
+                              {{#if fulfillment.is_tracking_number_url}}
+                                  You can track your shipment with
+                                  <a href="{{ fulfillment.tracking_number }}">{{ fulfillment.tracking_number }}</a> link.
+                              {{else}}
+                                  Your shipment tracking number is: {{ fulfillment.tracking_number }}
+                              {{/if}}
+                            </div>
+                            {{/if}}
                           </div>
                         </td>
                       </tr>
@@ -385,7 +396,7 @@
                     "
                     align="left"
                   >
-                    {{product_name}} ({{variant_name}}){{#unless is_fulfilled}}*{{/unless}}
+                    {{product_name}} ({{variant_name}}){{#if (compare quantity ">" quantity_fulfilled)}} *{{/if}}
                   </td>
 
                   {{else}}
@@ -404,7 +415,7 @@
                     "
                     align="left"
                   >
-                    {{product_name}}
+                    {{product_name}}{{#if (compare quantity ">" quantity_fulfilled)}} *{{/if}}
                   </td>
                   {{/if}}
 

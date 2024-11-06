@@ -170,25 +170,28 @@
                               color: #737373;
                             "
                           >
-                            Hi {{order.billing_address.first_name}},
+                            Hi {{user.first_name}},
                             <div style="margin-top: 13px">
                               We have recieved a request to change the email
-                              address for the Inspirations Studios email account
-                              belonging to:
+                              address for your Inspirations Studios account:
                             </div>
 
                             <div style="margin-top: 13px">
-                              {{order.billing_address.email}}
+                              From: {{old_email}}
                             </div>
 
                             <div style="margin-top: 13px">
-                              If this was you, please set your new email address
-                              here:
+                              To: {{new_email}}
+                            </div>
+
+                            <div style="margin-top: 13px">
+                              If this was you, please confirm your new email address
+                              by clicking on the following link:
                             </div>
 
                             <div style="margin: 30px 0; text-align: center">
                               <a
-                                href="{{invoice.download_url}}"
+                                href="{{redirect_url}}"
                                 style="
                                   color: white;
                                   background-color: #b8a77a;
@@ -389,11 +392,6 @@
                               color: #000000;
                             "
                           >
-                            {{#if order}}
-                            <script type="application/ld+json">
-                              {{{{raw}}}}{{schema_markup}}{{{{/raw}}}}
-                            </script>
-                            {{/if}}
                           </div>
                         </td>
                       </tr>

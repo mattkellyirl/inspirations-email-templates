@@ -212,13 +212,11 @@
                               Order #{{order.number}}
                             </div>
 
-                            <div>Payment Amount: AUD {{price.total}}</div>
+                            <div>Payment Amount: {{price payment.captured_amount payment.captured_amount payment.currency display_gross=false}}</div>
 
-                            <div>Payment Method: {{payment.method}}</div>
+                            <div>Status: {{payment.charge_status}}</div>
 
-                            <div>Payment Date: {{payment.date}}</div>
-
-                            <div>Transaction ID: {{transaction.id}}</div>
+                            <div>Payment Date: {{format_datetime payment.created "%d-%m-%Y %I:%M:%p"}}</div>
                           </div>
                         </td>
                       </tr>
